@@ -9,7 +9,7 @@ function is_level(){
 	}
 }
 
-function vorder_time($id){
+
 
 	$myinforow=M('voucher')->where(array('v_id'=>$id))->find();
 	return date('Y-m-d',$myinforow['create']);
