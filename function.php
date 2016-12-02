@@ -24,6 +24,9 @@ function is_login(){
 
 
 
+
+
+
 function shareSign($url){
 	$wechat=M('Wechat')->where(array('b_id'=>$_SESSION['bank_id']))->find();
     $jssdk = new \Common\Common\jssdk($wechat['appid'],$wechat['appsecret'],$url);
@@ -50,6 +53,9 @@ function overdue($time){
 	if($time<$overtime){
 		$data='已过期';
 		}else{
+
+
+
 
 		$data='未过期';
 	}
@@ -83,7 +89,7 @@ return $xinbie;
 /*信用卡类型*/
 function banktype($type){
 	if($type=='1'){
-		$type='储蓄卡';
+		$type='
 		}else{
 
 		$type='贷记卡（信用卡）';
@@ -100,7 +106,7 @@ function anngle($sex){
 	$xinbie='男';
 	}
 	if($sex==2){
-	$xinbie='女';
+///	$xinbie='女';
 	}
 	if(!$sex){
 	$xinbie='';
